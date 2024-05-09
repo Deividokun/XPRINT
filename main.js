@@ -45,6 +45,7 @@ boton.addEventListener('click', async () => {
 })
 const imageSelector = document.getElementById('H1')
 imageSelector.addEventListener('click', async () => {
-  const imageRandom = await searchPhotosRandom()
-  imagesFull(imageRandom.response)
-})
+  document.querySelector('main').innerHTML = ''; // Elimina todas las fotos actuales
+  const imageRandom = await searchPhotosRandom();
+  imagesFull(imageRandom.response);
+});

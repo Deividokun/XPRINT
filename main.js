@@ -43,3 +43,8 @@ boton.addEventListener('click', async () => {
   }
   console.log(searchPhotos(input.value))
 })
+const imageSelector = document.getElementById('H1')
+imageSelector.addEventListener('click', async () => {
+  const imageRandom = await searchPhotosRandom()
+  imagesFull(imageRandom.response)
+})
